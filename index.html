@@ -20,15 +20,16 @@
                             src="./assets/images/GertenHomes_Logo-03.jpg"></a>
                     <div class="nav-content">
                         <span class="nav-title">Title</span>
-                        <a class="btn-floating btn-large halfway-fab waves-effect waves-light">
+                        <a
+                            class=" right hide-on-med-and-down btn-floating btn-large halfway-fab waves-effect waves-light">
                             <i class="material-icons">menu</i>
                         </a>
                     </div>
 
-                    <ul id="nav-mobile" class="sidenav">
+                    <!-- <ul id="nav-mobile" class="sidenav">
                         <li><a href="#">Navbar Link</a></li>
                     </ul>
-                    <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
                 </div>
             </nav>
         </div>
@@ -174,7 +175,7 @@
         <!-- Modal Structure -->
         <div id="modal1" class="modal">
             <div class="modal-content">
-                <h5>Hello, welcome to Whatever Works! May we have the pleasure of knowing who is visiting?
+                <h5 class="center">Hello, welcome to Gerten Homes Real Estate Services! What is your journey?
                 </h5>
                 <div class="row">
                     <form class="col s12">
@@ -188,12 +189,42 @@
                                 <label for="last_name">Last Name</label>
                             </div>
                         </div>
-                        <div>
-                            <h6>PSA: We will not store your name outside of this browsing session 😊 </h6>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">email</i>
+                                <input id="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="row center">
+                            <div class="inline">
+                                <p>
+                                    <label>
+                                        <input class="with-gap inline" name="group3" type="radio" checked />
+                                        <span>Buying</span>
+                                    </label>
+                                </p>
+                            </div>
+                            <div class="inline">
+                                <p>
+                                    <label>
+                                        <input class="with-gap inline" name="group3" type="radio" />
+                                        <span>Selling</span>
+                                    </label>
+                                </p>
+                            </div>
+                            <div class="inline">
+                                <p>
+                                    <label>
+                                        <input class="with-gap inline" name="group3" type="radio" />
+                                        <span>Staging</span>
+                                    </label>
+                                </p>
+                            </div>
                         </div>
                     </form>
                 </div>
-                <a href="#!" id="get_name" class="modal-close waves-effect btn-large">Done</a>
+                <a href="#!" id="get_name" class="modal-close waves-effect btn-large button">Done</a>
             </div>
         </div>
 
