@@ -9,6 +9,10 @@ var displayModal = function () {
 	});
 };
 
+$(document).ready(function () {
+	$('.dropdown-trigger').dropdown();
+});
+
 /* function to see if a fName already exists, if not then (and only then) run the displayModal function */
 // !would need to update this to check if there is an email for this user in the local storage
 var displayDecision = function () {
