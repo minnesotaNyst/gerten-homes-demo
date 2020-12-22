@@ -6,52 +6,132 @@
  * Made By MaterializeCSS.com
  */
 
+/* Colors */
+:root {
+	--primary: #f79a0e;
+}
+
+.hero-title {
+	color: var(--primary);
+	text-shadow: 0px 2px 9px black;
+	shadow-color: black;
+}
+.hero-sub-title {
+	color: white;
+	text-shadow: 0px 2px 9px black;
+	shadow-color: black;
+}
+
+.button {
+	background-color: var(--primary);
+}
+
+.logo {
+	height: 100px;
+}
+
+.navbar {
+	height: 100px;
+}
+
+/* modal */
+.hidden {
+	display: none;
+}
+
+/* button style */
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover,
+.details:hover {
+	background-color: #55565c;
+	text-decoration: none;
+	color: whitesmoke;
+}
+.btn:focus,
+.btn-large:focus,
+.btn-small:focus,
+.details:focus {
+	background-color: #55565c;
+	text-decoration: none;
+	color: whitesmoke;
+}
+
+.inline {
+	display: flexbox;
+	display: inline-block;
+}
+
+.matter {
+	text-decoration: none;
+}
+
+/* unvisited link */
+a:link {
+	color: black;
+}
+
+/* visited link */
+a:visited {
+	color: gray;
+}
+
+/* mouse over link */
+a:hover {
+	color: blue;
+}
+
+/* selected link */
+a:active {
+	color: brown;
+}
 nav ul a,
 nav .brand-logo {
-  color: #444;
+	color: #444;
 }
 
 p {
-  line-height: 2rem;
+	line-height: 2rem;
 }
 
 .sidenav-trigger {
-  color: #26a69a;
+	color: #26a69a;
 }
 
 .parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
+	min-height: 380px;
+	line-height: 0;
+	height: 60vh;
+	color: rgba(255, 255, 255, 0.9);
+	opacity: 80%;
 }
-  .parallax-container .section {
-    width: 100%;
-  }
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
+.parallax-container .section {
+	width: 100%;
 }
 
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
+@media only screen and (max-width: 992px) {
+	.parallax-container .section {
+		position: absolute;
+		top: 40%;
+	}
+	#index-banner .section {
+		top: 10%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	#index-banner .section {
+		top: 0;
+	}
 }
 
 .icon-block {
-  padding: 0 15px;
+	padding: 0 15px;
 }
 .icon-block .material-icons {
-  font-size: inherit;
+	font-size: inherit;
 }
 
 footer.page-footer {
-  margin: 0;
+	margin: 0;
 }
