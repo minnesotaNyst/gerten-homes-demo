@@ -2,6 +2,8 @@
 	$(function () {
 		$('.sidenav').sidenav();
 		$('.parallax').parallax();
+		$('.tooltipped').tooltip();
+		$('.dropdown-trigger').dropdown();
 	}); // end of document ready
 })(jQuery); // end of jQuery name space
 
@@ -30,7 +32,13 @@ var displayDecision = function () {
 	}
 };
 
+var setName = function () {
+	var firstName = $('#first_name').val();
+	localStorage.setItem('firstName', JSON.stringify(firstName));
+};
+
 // call the modal
 $('.modal').modal();
 
 displayDecision();
+$('#get_name').on('click', setName);
