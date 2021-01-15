@@ -81,6 +81,14 @@ body {
 	width: auto;
 	border-radius: 8px;
 }
+
+#gmap {
+	display: inline-block;
+	min-width: 100%;
+	min-height: 50vh;
+	justify-content: center;
+}
+
 .grid-layout {
 	align-self: stretch;
 }
