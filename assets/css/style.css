@@ -109,6 +109,10 @@ p {
 .button {
 	background-color: var(--primary);
 }
+.menu-button {
+	padding: 15px;
+	size: 25vh !important;
+}
 
 .logo {
 	height: 100px;
@@ -229,6 +233,9 @@ p {
 	}
 	.team-photo-index {
 		width: 35vh;
+	}
+	.btn-large{
+		padding: 0px 3px;
 	}
 }
 
