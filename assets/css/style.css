@@ -30,6 +30,8 @@ p {
 .container {
 	width: 90%;
 }
+.container-fluid {
+}
 
 .hero {
 	position: relative;
@@ -80,12 +82,8 @@ p {
 .section-video {
 	top: 50px;
 }
-
-#training-btn {
-	display: inline-block;
-	height: auto;
-	width: auto;
-	border-radius: 8px;
+.section-two-index {
+	width: 100vw;
 }
 
 #gmap {
@@ -106,14 +104,6 @@ p {
 	z-index: 2;
 }
 
-.button {
-	background-color: var(--primary);
-}
-.menu-button {
-	padding: 15px;
-	size: 25vh !important;
-}
-
 .logo {
 	height: 100px;
 }
@@ -127,13 +117,18 @@ p {
 	height: 100px;
 }
 
-/* modal */
-
-.hidden {
-	display: none;
+/* button style */
+#training-btn {
+	display: inline-block;
+	height: auto;
+	width: auto;
+	border-radius: 8px;
 }
 
-/* button style */
+.download-btn {
+	color: white;
+	text-align: center;
+}
 
 .btn:hover,
 .btn-large:hover,
@@ -151,6 +146,17 @@ p {
 	background-color: #55565c;
 	text-decoration: none;
 	color: whitesmoke;
+}
+.button {
+	background-color: var(--primary);
+}
+.menu-button {
+	padding: 15px;
+	size: 25vh !important;
+}
+.menu-button-shadow {
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 
 .inline {
@@ -206,10 +212,6 @@ p {
 	opacity: 80%;
 }
 
-.parallax-container .section {
-	width: 100%;
-}
-
 .timeline p {
 	font-size: 50px;
 }
@@ -234,7 +236,7 @@ p {
 	.team-photo-index {
 		width: 35vh;
 	}
-	.btn-large{
+	.btn-large {
 		padding: 0px 3px;
 	}
 }
