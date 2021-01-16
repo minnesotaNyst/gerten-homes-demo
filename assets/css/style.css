@@ -8,13 +8,19 @@
  */
 
 /* Colors */
+:root {
+	--primary: #5e6f79; /* this is the slate color */
+	--secondary: #211f1c; /* this is the black color */
+	--trim: #f7931e; /* this is the trim color */
+	--header: Boston-bold;
+}
 @font-face {
-	font-family: Boston-bold;
-	src: url("assets/Boston-Bold.otf");
+	font-family: var(--header);
+	src: url('assets/Boston-Bold.otf');
 }
 
 body {
-	font-family: Boston-bold;
+	font-family: var(--header);
 }
 
 .container {
@@ -39,10 +45,6 @@ body {
 	transform: translate(-50%, -50%);
 }
 
-:root {
-	--primary: #f79a0e;
-}
-
 .primary-color {
 	background-color: #f79a0e;
 }
@@ -53,19 +55,18 @@ body {
 
 .hero-title {
 	color: var(--primary);
-	text-shadow: 0px 2px 9px black;
-	shadow-color: black;
+	/* text-shadow: 0px 2px 9px black; */
 }
 
 .hero-sub-title {
-	color: white;
-	text-shadow: 0px 2px 9px black;
-	shadow-color: black;
+	color: black;
+	font-weight: bold;
+	/* text-shadow: 0px 2px 9px black; */
 }
 
 .section-img {
 	position: absolute;
-	opacity: .4;
+	opacity: 0.4;
 	min-width: 100%;
 	height: 500px;
 	overflow: hidden;
@@ -108,6 +109,10 @@ body {
 	height: 100px;
 }
 
+.exp-nav-logo {
+	size: 50%;
+}
+
 .navbar {
 	height: 100px;
 }
@@ -120,13 +125,19 @@ body {
 
 /* button style */
 
-.btn:hover, .btn-large:hover, .btn-small:hover, .details:hover {
+.btn:hover,
+.btn-large:hover,
+.btn-small:hover,
+.details:hover {
 	background-color: #55565c;
 	text-decoration: none;
 	color: whitesmoke;
 }
 
-.btn:focus, .btn-large:focus, .btn-small:focus, .details:focus {
+.btn:focus,
+.btn-large:focus,
+.btn-small:focus,
+.details:focus {
 	background-color: #55565c;
 	text-decoration: none;
 	color: whitesmoke;
@@ -164,7 +175,8 @@ a:active {
 	color: brown;
 }
 
-nav ul a, nav .brand-logo {
+nav ul a,
+nav .brand-logo {
 	color: #444;
 }
 

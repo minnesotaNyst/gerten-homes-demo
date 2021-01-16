@@ -14,53 +14,87 @@
     </head>
 
     <body>
+        <!-- THIS IS THE NAVIGATION BAR SECTION -->
         <div class="navbar-fixed">
-            <!-- Dropdown Structure -->
-            <ul id='dropdown1' class='dropdown-content'>
-                <li><a href="#!">Buy</a></li>
-                <li><a href="#!">Sell</a></li>
-                <!-- <li class="divider" tabindex="-1"></li> -->
-                <li><a href="#!">Stage</a></li>
-                <li><a href="#!"><i class="material-icons">contacts</i>Contact</a></li>
-
-            </ul>
-            <nav class="white navbar" role="navigation">
-                <div class="nav-wrapper container">
-                    <a id="logo-container" href="#" class="brand-logo"> <img class="logo"
+            <nav>
+                <div class="white nav-wrapper">
+                    <a class="brand-logo center" id="logo-container" href="#" class="brand-logo"><img class="logo"
                             src="./assets/images/GertenHomes_Logo-03.jpg"></a>
-                    <div class="nav-content">
-                        <span class="nav-title">Title</span>
-                        <a class=" right hide-on-med-and-down btn-floating btn-large halfway-fab waves-effect waves-light button dropdown-trigger btn tooltipped"
-                            data-position="bottom" data-tooltip="Click for menu!" data-target='dropdown1'>
-                            <i class="material-icons">menu</i>
-                        </a>
-                    </div>
-
-                    <!-- <ul id="nav-mobile" class="sidenav">
-                        <li><a href="#">Navbar Link</a></li>
+                    <a class="brand-logo left exp-nav-logo" id="logo-container" href="#"><img
+                            class="logo" src="./assets/images/eXpRealty-Black-logo.png"></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="sass.html">Sass</a></li>
+                        <li><a href="badges.html">Components</a></li>
+                        <li class="active"><a href="collapsible.html">JavaScript</a></li>
                     </ul>
-                    <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
                 </div>
             </nav>
         </div>
 
-        <div id="index-banner" class="parallax-container">
+        <!-- THIS IN THE FIRST SECTION OF THE PAGE -->
+        <div id="index-banner" class="container">
             <div class="section no-pad-bot">
                 <div class="container">
                     <br><br>
-                    <h1 class="header center hero-title">More Than Just a Home</h1>
+                    <!-- <h1 class="header center hero-title">More Than Just a Home</h1> -->
                     <div class="row center">
-                        <h5 class="header col s12 hero-sub-title">What is your journey?</h5>
+                        <h5 class="header col s12 hero-sub-title">WHAT IS YOUR JOURNEY?</h5>
                     </div>
                     <div class="row center journey">
-                        <div class="inline">
-                            <a href="#" id="download-button" class="btn-large waves-effect button">Buy</a>
-                        </div>
-                        <div class="inline">
-                            <a href="#" id="download-button" class="btn-large waves-effect button">Sell</a>
-                        </div>
-                        <div class="inline">
-                            <a href="#" id="download-button" class="btn-large waves-effect button">Stage</a>
+                        <div class="row grid-layout">
+                            <!--This card needs adjustment at height-->
+                            <div class="col s12 m4">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <!-- image taken from https://media.istockphoto.com/vectors/buying-a-new-house-vector-id628884380?k=6&m=628884380&s=612x612&w=0&h=0JHnf3HgX-9-F3Fni4s38e-04aMLlKRhAKSLeqIE3hg= -->
+                                        <img
+                                            src="https://media.istockphoto.com/vectors/buying-a-new-house-vector-id628884380?k=6&m=628884380&s=612x612&w=0&h=0JHnf3HgX-9-F3Fni4s38e-04aMLlKRhAKSLeqIE3hg=">
+                                        <!--  -->
+                                        <!--  <span class="card-title"></span> -->
+                                    </div>
+                                    <div class="card-content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maxime,
+                                            voluptates necessitatibus quis veniam iure quam cupiditate in blanditiis
+                                            magnam quidem. Sapiente aspernatur ad natus? Maiores saepe tenetur
+                                            repellendus consectetur!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m4">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <!-- image taken from https://i.ytimg.com/vi/bX0WVbWNHOc/maxresdefault.jpg -->
+                                        <img src="https://i.ytimg.com/vi/bX0WVbWNHOc/maxresdefault.jpg">
+                                        <!-- title of the card can go here -->
+                                        <!-- <span class="card-title center-align"></span> -->
+                                    </div>
+                                    <div class="card-content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maxime,
+                                            voluptates necessitatibus quis veniam iure quam cupiditate in blanditiis
+                                            magnam quidem. Sapiente aspernatur ad natus? Maiores saepe tenetur
+                                            repellendus consectetur!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col s12 m4">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <!-- image taken from https://static.vecteezy.com/system/resources/previews/000/357/640/original/classic-living-room-home-interior-design-banner-vector.jpg -->
+                                        <img
+                                            src="https://static.vecteezy.com/system/resources/previews/000/357/640/original/classic-living-room-home-interior-design-banner-vector.jpg">
+                                        <!-- title can go here -->
+                                        <!-- <span class="card-title">Be Financially Prepared</span> -->
+                                    </div>
+                                    <div class="card-content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maxime,
+                                            voluptates necessitatibus quis veniam iure quam cupiditate in blanditiis
+                                            magnam quidem. Sapiente aspernatur ad natus? Maiores saepe tenetur
+                                            repellendus consectetur!</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <br><br>
@@ -68,7 +102,7 @@
                 </div>
             </div>
             <!--taken from: https://i.pinimg.com/originals/c2/3e/91/c23e911fef517d25b4bc0ea288cfd0a3.jpg -->
-            <div class="parallax"><img src="./assets/images/background1.jpg" alt="Unsplashed background img 1"></div>
+            <!-- <div class="parallax"><img src="./assets/images/background1.jpg" alt="Unsplashed background img 1"></div> -->
         </div>
 
 
@@ -130,7 +164,7 @@
         </div>
 
 
-        <div class="parallax-container valign-wrapper">
+        <div class="container valign-wrapper">
             <div class="section no-pad-bot">
                 <div class="container">
                     <div class="row center">
@@ -140,7 +174,7 @@
                 </div>
             </div>
             <!-- taken from: https://images.template.net/wp-content/uploads/2016/11/14125826/Landscape-Urban-Photography.jpg-->
-            <div class="parallax"><img src="./assets/images/background2.jpg" alt="Unsplashed background img 2"></div>
+            <!-- <div class="parallax"><img src="./assets/images/background2.jpg" alt="Unsplashed background img 2"></div> -->
         </div>
 
         <div class="container">
@@ -165,7 +199,7 @@
         </div>
 
 
-        <div class="parallax-container valign-wrapper">
+        <div class="container valign-wrapper">
             <div class="section no-pad-bot">
                 <div class="container">
                     <div class="row center">
@@ -175,15 +209,15 @@
                 </div>
             </div>
             <!-- taken from: https://cdn.wallpapersafari.com/17/73/Pj7Xf5.jpg -->
-            <div class="parallax"><img src="./assets/images/background3.jpg" alt="Unsplashed background img 3"></div>
+            <!-- <div class="parallax"><img src="./assets/images/background3.jpg" alt="Unsplashed background img 3"></div> -->
         </div>
 
         <!-- Modal Section -->
         <!-- Modal Triggers -->
-        <a class="waves-effect waves-light btn modal-trigger hidden" href="#modal1">Modal</a>
+        <!-- <a class="waves-effect waves-light btn modal-trigger hidden" href="#modal1">Modal</a> -->
 
         <!-- Modal Structure -->
-        <div id="modal1" class="modal">
+        <!-- <div id="modal1" class="modal">
             <div class="modal-content">
                 <h5 class="center">Hello, welcome to Gerten Homes Real Estate Services! What is your journey?
                 </h5>
@@ -236,7 +270,7 @@
                 </div>
                 <a href="#!" id="get_name" class="modal-close waves-effect btn-large button">Done</a>
             </div>
-        </div>
+        </div> -->
 
         <!-- Footer section -->
         <footer class="page-footer black">
