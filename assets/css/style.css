@@ -23,6 +23,10 @@ body {
 	font-family: var(--header);
 }
 
+p {
+	font-size: 18px;
+}
+
 .container {
 	width: 90%;
 }
@@ -59,8 +63,9 @@ body {
 }
 
 .hero-sub-title {
-	color: black;
+	color: var(--primary);
 	font-weight: bold;
+	font-size: 48px;
 	/* text-shadow: 0px 2px 9px black; */
 }
 
@@ -110,7 +115,8 @@ body {
 }
 
 .exp-nav-logo {
-	size: 50%;
+	height: 75px;
+	padding: 15px;
 }
 
 .navbar {
@@ -212,11 +218,17 @@ p {
 	#index-banner .section {
 		top: 10%;
 	}
+	.team-photo-index {
+		width: 35vh;
+	}
 }
 
 @media only screen and (max-width: 600px) {
 	#index-banner .section {
 		top: 0;
+	}
+	.team-photo-index {
+		width: 35vh;
 	}
 }
 
