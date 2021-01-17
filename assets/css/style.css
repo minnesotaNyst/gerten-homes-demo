@@ -8,6 +8,12 @@
  */
 
 /* Colors */
+:root {
+	--primary: #f79a0e;
+	--secondary: black;
+	--tertiary: #536f79;
+}
+
 @font-face {
 	font-family: Boston-bold;
 	src: url("assets/Boston-Bold.otf");
@@ -39,9 +45,7 @@ body {
 	transform: translate(-50%, -50%);
 }
 
-:root {
-	--primary: #f79a0e;
-}
+
 
 .primary-color {
 	background-color: #f79a0e;
