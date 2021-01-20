@@ -6,6 +6,8 @@ $(document).ready(function () {
     $('.slider').slider().height(450);
 });
 
-$(document).ready(function () {
-    $('.carousel').carousel();
-});
+$('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true,
+    duration: 200
+  });
