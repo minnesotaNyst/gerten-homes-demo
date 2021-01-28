@@ -8,19 +8,18 @@
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="../css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
 <body>
-    <!-- THIS IS THE NAVIGATION BAR SECTION -->
+    <!-- Nav bar -->
     <div class="navbar-fixed">
         <nav>
             <div class="white nav-wrapper">
                 <a class="brand-logo center" id="logo-container" href="#"><img class="logo"
                         src="../images/GertenHomes_Logo-03.jpg"></a>
-                <a class="brand-logo left" id="logo-container" href="#"><img
+                <a class="brand-logo left" id="logo-container" href="./index.html"><img
                         class="logo exp-nav-logo hide-on-med-and-down" src="../images/eXpRealty-Black-logo.png"></a>
                 <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large right menu-button"><i
                         class="material-icons">menu</i></a>
@@ -29,26 +28,37 @@
     </div>
     <ul id="slide-out" class="sidenav">
         <img class="responsive-img" src="../images/GertenHomes_Logo-05.jpg">
-        <li><a class="waves-effect" href="#!">BUY</a></li>
+        <li><a class="waves-effect" href="./index.html">HOME</a></li>
         <li>
-            <div class="divider"></div>
+            <div class="divider trim-color"></div>
         </li>
-        <li><a class="waves-effect" href="#!">SELL</a></li>
+        <li><a class="waves-effect" href="./buy.html">BUY</a></li>
         <li>
-            <div class="divider"></div>
+            <div class="divider trim-color"></div>
         </li>
-        <li><a class="subheader">Subheader</a></li>
-        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        <li><a class="waves-effect" href="./sell.html">SELL</a></li>
+        <li>
+            <div class="divider trim-color"></div>
+        </li>
+        <li><a class="waves-effect" href="#!">HOME SERVICES</a></li>
+        <li>
+            <div class="divider trim-color"></div>
+        </li>
+        <li><a class="waves-effect" href="./design-on-demand.html">DESIGN ON DEMAND</a></li>
+        <li>
+            <div class="divider trim-color"></div>
+        </li>
+        <li><a class="waves-effect" href="./AboutUs.html">ABOUT US</a></li>
     </ul>
 
     <!-- THIS IN THE FIRST SECTION OF THE PAGE -->
-    <div id="index-banner" class="container">
+    <div class="container">
         <div class="section no-pad-bot">
             <div class="container">
                 <br><br>
                 <!-- <h1 class="header center hero-title">More Than Just a Home</h1> -->
                 <div class="row center">
-                    <h5 class="header col s12 hero-sub-title">WHAT IS YOUR JOURNEY?</h5>
+                    <h2 class="header col s12 primary-color-text">WHAT IS YOUR JOURNEY?</h2>
                 </div>
                 <!-- JOURNEY CARDS -->
                 <div class="row center journey">
@@ -110,7 +120,7 @@
                     </div>
                 </div>
                 <div class="row center">
-                    <h5 class="header col s12 hero-sub-title">WE ARE A TEAM</h5>
+                    <h3 class="header col s12 primary-color-text">WE ARE A TEAM</h3>
                 </div>
                 <div class="row center">
                     <p>We are your local Real Estate experts headquartered in the Twin Cities. Our team empowers our
@@ -123,7 +133,7 @@
                         src="https://www.pngkit.com/png/full/414-4143812_team-image-professional-team-cartoon.png"
                         alt="This is a picture of the Gerten Homes Real Estate team.">
                 </div>
-                <div class="divider"></div>
+                <div class="divider trim-color"></div>
 
                 <br><br>
 
@@ -134,91 +144,73 @@
     </div>
 
     <!-- THIS IS THE SECONT SECTION OF THE PAGE -->
-    <div class="container-fluid">
-        <div class="container">
-            <div class="section section-two-index">
-                <!--   Icon Section   -->
+    <section class="section container">
+        <div class="row section">
+            <div class="col s12 m4">
+                <img src="../images/mobile-app.png">
+            </div>
+            <div class="col s12 m8">
                 <div class="row">
-                    <div class="col s12 m3">
-                        <div class="center">
-                            <img src="../images/mobile-app.png" alt="">
-                        </div>
-                    </div>
-
-                    <!-- GERTEN HOMES APP BLOCK -->
-                    <div class="col s12 m6">
-                        <div class="icon-block">
-                            <h5 class="center hero-sub-title">GERTEN HOMES APP</h5>
-
-                            <p class="light">Search listings from your phone using the Gerten Homes mobile search
-                                app -
-                                the best on-the-go tool for homebuyers. Utilize your phone's location data to get a
-                                sense for homes in the area and search listings from the palm of your hand.</p>
-                        </div>
-                        <div class="row center-align">
-                            <a class="waves-effect waves-light btn-large primary-color" id="training-btn">
-                                <h4 class="download-btn"><i class="fa fa-apple center" aria-hidden="true"
-                                        style="color:white"></i> Download</h4>
-                            </a>
-                        </div>
-                    </div>
+                    <h2 class="section header primary-color-text">
+                        Gerten Homes Mobile App
+                    </h2>
                 </div>
-
-            </div>
-            <div class="divider"></div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="section">
-
-            <div class="row">
-                <div class="col s12 center">
-                    <h3><i class="mdi-content-send brown-text"></i></h3>
-                    <h4>Meet The Team</h4>
-                    <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                        scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna
-                        fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra
-                        ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus.
-                        Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper
-                        molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget
-                        dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus
-                        et ultrices posuere cubilia Curae;</p>
+                <div class="row">
+                    <h4>
+                        Search listings from your phone using the Gerten Homes mobile search app - the best on-the-go
+                        tool for homebuyers. Utilize your phone's location data to get a sense for homes in the area and
+                        search listings from the palm of your hand.
+                    </h4>
+                </div>
+                <div class="row valign-wrapper">
+                    <i class="large material-icons">file_download</i>
+                    <span>
+                        <a class="waves-effect waves-light btn-large trim-color secondary-color-text" id="training-btn">
+                            <h4 class="white-text">Download the App</h4>
+                        </a>
+                    </span>
                 </div>
             </div>
-
         </div>
-    </div>
+    </section>
 
     <!-- Footer section -->
-    <footer class="page-footer black">
+    <footer class="page-footer primary-color">
         <div class="container">
             <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Company Bio</h5>
-                    <p class="grey-text text-lighten-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Alias iusto quibusdam cum qui nostrum ut! Recusandae fuga reprehenderit odit molestias
-                        pariatur fugit. Sunt fuga rerum, architecto error at odio molestiae.</p>
-
+                <div class="col m3 s12">
+                    <h4>Let's Talk</h4>
+                    <h5>Gerten Homes</h5>
+                    <p>729 N Washington Ave</p>
+                    <p>Minneapolis, MN 55413</p>
+                    <p><i class="x-small material-icons">phone</i>: 612.324.1473</p>
 
                 </div>
-                <div class="col l3 s12">
-                    <h5 class="white-text">Settings</h5>
-                    <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
-                    </ul>
+                <div class="col m5 s12">
+                    <h4 class="white-text">Send Us A Message</h4>
+                    <div class="input-field col m12">
+                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Full name</label>
+                    </div>
+                    <div class="input-field col m12">
+                        <textarea id="textarea2" class="materialize-textarea"></textarea>
+                        <label for="textarea2">Email</label>
+                    </div>
+                    <div class="input-field col m12">
+                        <textarea id="textarea3" class="materialize-textarea"></textarea>
+                        <label for="textarea3">Phone</label>
+                    </div>
                 </div>
-                <div class="col l3 s12">
-                    <h5 class="white-text">Connect</h5>
-                    <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
-                    </ul>
+                <div class="col m4 s12">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10678.568690385511!2d-93.28490887720614!3d44.98714869298386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b33356708eba27%3A0xb375f74dfcb9431e!2sWeWork%20Coworking%20%26%20Office%20Space!5e0!3m2!1sen!2sus!4v1610751161907!5m2!1sen!2sus"
+                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"
+                        id="gmap"></iframe>
+                    </iframe>
                 </div>
             </div>
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright black">
             <div class="container">
                 <!-- Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a> -->
                 © 2021Gerten Homes Real Estate Services Brokered by eXp Realty
@@ -230,7 +222,6 @@
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="../js/materialize.min.js"></script>
-    <script src="../js/init.js"></script>
     <script src="../js/index.js"></script>
 
 </body>
