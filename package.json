@@ -1,23 +1,27 @@
 {
-  "name": "gerten-homes-demo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "npm run server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nathan-potts41/gerten-homes-demo.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nathan-potts41/gerten-homes-demo/issues"
-  },
-  "homepage": "https://github.com/nathan-potts41/gerten-homes-demo#readme",
-  "dependencies": {
-    "dotenv": "^8.2.0",
-    "handlebars": "^4.7.6"
-  }
+	"name": "gerten-homes-demo",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nathan-potts41/gerten-homes-demo.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/nathan-potts41/gerten-homes-demo/issues"
+	},
+	"homepage": "https://github.com/nathan-potts41/gerten-homes-demo#readme",
+	"dependencies": {
+		"bcrypt": "^5.0.0",
+		"dotenv": "^8.2.0",
+		"env": "0.0.2",
+		"express": "^4.17.1",
+		"handlebars": "^4.7.6",
+		"sequelize": "^6.5.0"
+	}
 }
