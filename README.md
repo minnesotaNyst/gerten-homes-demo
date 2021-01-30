@@ -41,15 +41,19 @@ THEN I am presented with the following options: view all departments, view all r
 - Env
 - MySQL
 
+- npm install express-handlebars
+- npm install sequelize
+- npm install bcrypt
+- npm install env
+- npm install mysql2
+
 ## Contributing
 
 Nathan Potts, Tony Potts, Jake Nystrom, Andrew Warmath, William Pearson (sort of)
 
 ## Questions
 
-
 ## About the Author
-
 
 ## Screenshot
 
