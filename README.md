@@ -49,7 +49,7 @@ THEN I am presented with the following options: view all departments, view all r
 
 ## Contributing
 
-Nathan Potts, Tony Potts, Jake Nystrom, Andrew Warmath, William Pearson (sort of)
+Nathan Potts, Tony Potts, Jake Nystrom, Andrew Warmath, William Pearson
 
 ## Questions
 
