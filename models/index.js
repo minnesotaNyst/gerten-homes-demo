@@ -1,7 +1,17 @@
-// import model
+// import the models
+
 const Post = require('./Post');
+const Comment = require('./Comment');
 
-// since there is only one table, there are no relationships at this time
+// !are there any associations that we can create?
+// *comments?
 
-// export Post model
-module.exports = { Post };
+Comment.belongsTo(Post, {
+	foreignKey: 'user_id'
+});
+
+Post.hasMany(Comment, {
+	foreignKey: 'user_id'
+});
+
+module.exports = { Post, Comment };
