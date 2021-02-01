@@ -1,7 +1,7 @@
 // import model
-const User = require('./User');
+const Post = require('./Post');
 
 // since there is only one table, there are no relationships at this time
 
-// export User model
-module.exports = { User };
+// export Post model
+module.exports = { Post };
