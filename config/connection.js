@@ -1,5 +1,6 @@
-// This is where we create a connection to the db and call sequelize...
-// !Tony, I think you will be taking this section on....
+// I created a connection to the db and mysql with my .env file.
+// This is where it gets tricky because I have a password enabled,
+// so I'm not sure how we are going to collaborate unless !JAKE! I give you that?
 
 const Sequelize = require('sequelize');
 
