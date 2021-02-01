@@ -4,6 +4,17 @@ const sequelize = require('../../config/connection');
 // !Tony, we will import your model here...
 const { Post } = require('../../models');
 
+// !Jake, I added a get route to findAll so we can look at the DB
+router.get('/', (req, res) => {
+	Post.findAll({
+	})
+	.then(dbPostData => res.json(dbPostData))
+	.catch(err => {
+		console.log(err);
+		res.status(500).json(err);
+	});
+});
+
 // POST https://api.followupboss.com/v1/events
 router.post('/', (req, res) => {
 	// TODO: need to update this post.create to match whatever follow up boss will accept...
