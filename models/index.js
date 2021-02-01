@@ -1,17 +1,17 @@
 // import the models
 
-const User = require('./User');
+const Post = require('./Post');
 const Comment = require('./Comment');
 
 // !are there any associations that we can create?
 // *comments?
 
-Comment.belongsTo(User, {
+Comment.belongsTo(Post, {
 	foreignKey: 'user_id'
 });
 
-User.hasMany(Comment, {
+Post.hasMany(Comment, {
 	foreignKey: 'user_id'
 });
 
-module.exports = { User, Comment };
+module.exports = { Post, Comment };
