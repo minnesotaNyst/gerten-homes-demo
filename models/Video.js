@@ -11,11 +11,24 @@ Video.init(
             primaryKey: true,
             autoIncrement: true
         },
-        category: {
+        title: {
             type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1]
+            allowNull: false
+        },
+// ******* !Nathan! this is where you'll have to embed the video thumbnail "DataTypes.______"
+// ******* This is currently a placeholder
+        // video_url: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false,
+        //     validate: {
+        //         isURL: true
+        //     }
+        // },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id'
             }
         }
     },
@@ -23,7 +36,7 @@ Video.init(
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'category'
+        modelName: 'video'
     }
 );
 
