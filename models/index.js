@@ -2,6 +2,7 @@
 
 const Post = require('./Post');
 const Comment = require('./Comment');
+const Video = require('./Video');
 
 // !are there any associations that we can create?
 // *comments?
@@ -14,4 +15,12 @@ Post.hasMany(Comment, {
 	foreignKey: 'user_id'
 });
 
-module.exports = { Post, Comment };
+Comment.belongsTo(Video, {
+	foreignKey: 'comment_id'
+})
+
+Video.hasMany(Comment, {
+	foreignKey: 'comment_id'
+})
+
+module.exports = { Post, Comment, Video };

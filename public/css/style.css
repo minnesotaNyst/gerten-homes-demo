@@ -67,6 +67,12 @@ p {
 	width: 90%;
 }
 
+.login-container {
+	padding: 10px;
+	justify-content: center;
+	margin: auto;
+}
+
 .hero {
 	position: relative;
 	text-align: center;
