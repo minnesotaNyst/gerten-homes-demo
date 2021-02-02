@@ -1,6 +1,6 @@
 // import the models
 
-const Post = require('./Post');
+const User = require('./User');
 const Comment = require('./Comment');
 const Video = require('./Video');
 
@@ -11,7 +11,7 @@ Comment.belongsTo(Post, {
 	foreignKey: 'user_id'
 });
 
-Post.hasMany(Comment, {
+User.hasMany(Comment, {
 	foreignKey: 'user_id'
 });
 
@@ -23,4 +23,4 @@ Video.hasMany(Comment, {
 	foreignKey: 'comment_id'
 })
 
-module.exports = { Post, Comment, Video };
+module.exports = { User, Comment, Video };
