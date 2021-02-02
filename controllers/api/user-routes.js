@@ -6,14 +6,14 @@ const { Post } = require('../../models');
 
 // !Jake, I added a get route to findAll so we can look at the DB
 router.get('/', (req, res) => {
-	Post.findAll({
-	})
-	.then(dbPostData => res.json(dbPostData))
-	.catch(err => {
-		console.log(err);
-		res.status(500).json(err);
-	});
+	Post.findAll({})
+		.then(dbPostData => res.json(dbPostData))
+		.catch(err => {
+			console.log(err);
+			res.status(500).json(err);
+		});
 });
+
 
 // POST https://api.followupboss.com/v1/events
 router.post('/', (req, res) => {
