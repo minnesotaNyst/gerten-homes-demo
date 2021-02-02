@@ -33,6 +33,13 @@ User.init(
 				isEmail: true
 			}
 		},
+		password: {
+			type: DataTypes.STRING,
+			allowNull: false,
+			validate: {
+			  len: [4]
+			}
+		  },
 		survey_query: {
 			type: DataTypes.STRING,
 			allowNull: false,
