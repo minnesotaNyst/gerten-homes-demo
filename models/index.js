@@ -1,5 +1,4 @@
 // import the models
-
 const User = require('./User');
 const Comment = require('./Comment');
 const Video = require('./Video');

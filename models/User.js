@@ -33,7 +33,10 @@ User.init(
 			type: DataTypes.STRING,
 			allowNull: false,
 			validate: {
-				len: [80]
+				max: {
+					args: 80,
+					msg: 'Please use a maximum of 80 characters'
+				}
 			}
 		}
 	},
