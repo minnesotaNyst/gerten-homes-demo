@@ -16,10 +16,10 @@ User.hasMany(Comment, {
 
 Comment.belongsTo(Video, {
 	foreignKey: 'comment_id'
-})
+});
 
 Video.hasMany(Comment, {
 	foreignKey: 'comment_id'
-})
+});
 
 module.exports = { User, Comment, Video };
