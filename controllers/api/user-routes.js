@@ -15,6 +15,7 @@ router.get('/', (req, res) => {
 });
 
 // route to create a user when the signup?? maybe?
+// !TONYYYYYYYYYY
 router.post('/', (req, res) => {
 	// TODO: need to update this post.create to match whatever follow up boss will accept...
 	User.create({
@@ -42,20 +43,21 @@ router.post('/login', (req, res) => {
 			return;
 		}
 
-		// const validPassword = dbUserData.checkPassword(req.body.password);
+		const validPassword = dbUserData.checkPassword(req.body.password);
+		console.log(validPassword);
 
-		// if (!validPassword) {
-		// 	res.status(400).json({ message: 'Incorrect password!' });
-		// 	return;
-		// }
+		if (!validPassword) {
+			res.status(400).json({ message: 'Incorrect password!' });
+			return;
+		}
 
-		req.session.save(() => {
-			req.session.user_id = dbUserData.id;
-			req.session.username = dbUserData.username;
-			req.session.loggedIn = true;
+		// req.session.save(() => {
+		// 	req.session.user_id = dbUserData.id;
+		// 	req.session.username = dbUserData.username;
+		// 	req.session.loggedIn = true;
 
-			res.json({ user: dbUserData, message: 'You are now logged in!' });
-		});
+		// 	res.json({ user: dbUserData, message: 'You are now logged in!' });
+		// });
 	});
 });
 
