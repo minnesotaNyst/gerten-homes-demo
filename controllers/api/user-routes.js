@@ -1,13 +1,11 @@
 const router = require('express').Router();
-const sequelize = require('../../config/connection');
-
-// !Tony, we will import your model here...
+// const sequelize = require('../../config/connection');
 const { User } = require('../../models');
 
-// !Jake, I added a get route to findAll so we can look at the DB
+// don't really need this but that's fine...
 router.get('/', (req, res) => {
 	User.findAll({
-		attributes: { exclude: ['password'] }
+		attributes: ['username', 'email']
 	})
 		.then(dbUserData => res.json(dbUserData))
 		.catch(err => {
@@ -16,7 +14,7 @@ router.get('/', (req, res) => {
 		});
 });
 
-// POST https://api.followupboss.com/v1/events
+// route to create a user when the signup?? maybe?
 router.post('/', (req, res) => {
 	// TODO: need to update this post.create to match whatever follow up boss will accept...
 	User.create({
@@ -29,6 +27,36 @@ router.post('/', (req, res) => {
 			console.log(err);
 			res.status(500).json(err);
 		});
+});
+
+// login to the thing man...
+router.post('/login', (req, res) => {
+	// expects {email: 'lernantino@gmail.com', password: 'password1234'}
+	User.findOne({
+		where: {
+			email: req.body.email
+		}
+	}).then(dbUserData => {
+		if (!dbUserData) {
+			res.status(400).json({ message: 'No user with that email address!' });
+			return;
+		}
+
+		// const validPassword = dbUserData.checkPassword(req.body.password);
+
+		// if (!validPassword) {
+		// 	res.status(400).json({ message: 'Incorrect password!' });
+		// 	return;
+		// }
+
+		req.session.save(() => {
+			req.session.user_id = dbUserData.id;
+			req.session.username = dbUserData.username;
+			req.session.loggedIn = true;
+
+			res.json({ user: dbUserData, message: 'You are now logged in!' });
+		});
+	});
 });
 
 module.exports = router;
