@@ -1,13 +1,11 @@
 const router = require('express').Router();
-const sequelize = require('../../config/connection');
-
-// !Tony, we will import your model here...
+// const sequelize = require('../../config/connection');
 const { User } = require('../../models');
 
-// !Jake, I added a get route to findAll so we can look at the DB
+// don't really need this but that's fine...
 router.get('/', (req, res) => {
 	User.findAll({
-		attributes: { exclude: ['password'] }
+		attributes: ['username', 'email']
 	})
 		.then(dbUserData => res.json(dbUserData))
 		.catch(err => {
@@ -16,7 +14,8 @@ router.get('/', (req, res) => {
 		});
 });
 
-// POST https://api.followupboss.com/v1/events
+// route to create a user when the signup?? maybe?
+// !TONYYYYYYYYYY
 router.post('/', (req, res) => {
 	// TODO: need to update this post.create to match whatever follow up boss will accept...
 	User.create({
@@ -40,25 +39,25 @@ router.post('/login', (req, res) => {
 		}
 	}).then(dbUserData => {
 		if (!dbUserData) {
-			res.status(400).json({ message: 'No user with that email address! ' });
+			res.status(400).json({ message: 'No user with that email address!' });
 			return;
 		}
 
-		//verify user
 		const validPassword = dbUserData.checkPassword(req.body.password);
+		console.log(validPassword);
+
 		if (!validPassword) {
 			res.status(400).json({ message: 'Incorrect password!' });
 			return;
 		}
 
-		req.session.save(() => {
-			// declare session variables
-			req.session.user_id = dbUserData.id;
-			req.session.username = dbUserData.username;
-			req.session.loggedIn = true;
+		// req.session.save(() => {
+		// 	req.session.user_id = dbUserData.id;
+		// 	req.session.username = dbUserData.username;
+		// 	req.session.loggedIn = true;
 
-			res.json({ user: dbUserData, message: 'You are now logged in!' });
-		});
+		// 	res.json({ user: dbUserData, message: 'You are now logged in!' });
+		// });
 	});
 });
 

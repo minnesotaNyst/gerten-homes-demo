@@ -46,6 +46,7 @@ THEN I am presented with the following options: view all departments, view all r
 - npm install bcrypt
 - npm install env
 - npm install mysql2
+- npm i express-session connect-session-sequelize
 
 ## Contributing
 
