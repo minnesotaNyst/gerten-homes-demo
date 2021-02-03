@@ -42,12 +42,27 @@ async function loginFormHandler(event) {
 		});
 
 		if (response.ok) {
-			document.location.replace('/');
+			document.location.replace('http://localhost:3001/login');
 		} else {
 			alert(response.statusText);
 		}
 	}
 }
+
+async function renderLogin(event) {
+	event.preventDefault();
+
+	const response = await fetch('http://localhost:3001/login');
+
+	// check the response status
+	if (response.ok) {
+		console.log('success');
+	} else {
+		alert(response.statusText);
+	}
+}
+
+document.querySelector('#login').addEventListener('click', renderLogin);
 
 document
 	.querySelector('.login-form')

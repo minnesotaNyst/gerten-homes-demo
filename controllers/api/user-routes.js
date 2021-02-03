@@ -17,7 +17,6 @@ router.get('/', (req, res) => {
 // route to create a user when the signup?? maybe?
 // !TONYYYYYYYYYY
 router.post('/', (req, res) => {
-	// TODO: need to update this post.create to match whatever follow up boss will accept...
 	User.create({
 		username: req.body.username,
 		email: req.body.email,
@@ -57,6 +56,7 @@ router.post('/login', (req, res) => {
 			return;
 		}
 
+		// !Do we need to wrap this in and if statement? So...if validPassword then start the session?
 		req.session.save(() => {
 			// declare session variables
 			req.session.user_id = dbUserData.id;
@@ -64,6 +64,7 @@ router.post('/login', (req, res) => {
 			req.session.loggedIn = true;
 
 			res.json({ user: dbUserData, message: 'You are now logged in!' });
+			console.log('======LOGGED IN======');
 		});
 	});
 });
@@ -74,6 +75,8 @@ router.post('/logout', (req, res) => {
 		req.session.destroy(() => {
 			res.status(204).end();
 		});
+		res.json({ message: 'You are now logged out!' });
+		console.log('======LOGGED OUT======');
 	} else {
 		res.status(404).end();
 	}
