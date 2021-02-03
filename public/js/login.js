@@ -42,7 +42,6 @@ async function loginFormHandler(event) {
 		});
 
 		if (response.ok) {
-			document.location.replace('http://localhost:3001/login');
 		} else {
 			alert(response.statusText);
 		}
@@ -57,6 +56,8 @@ async function renderLogin(event) {
 	// check the response status
 	if (response.ok) {
 		console.log('success');
+		//reroutes to dashboard if login, problem is this is hardcoded data
+		document.location.replace('http://localhost:3001/dashboard');
 	} else {
 		alert(response.statusText);
 	}
