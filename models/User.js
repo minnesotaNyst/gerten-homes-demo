@@ -2,16 +2,20 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // create our Post model
-class Post extends Model {}
+class User extends Model {}
 
 // create fields/columns for Post model
-Post.init(
+User.init(
 	{
 		id: {
 			type: DataTypes.INTEGER,
 			allowNull: false,
 			primaryKey: true,
 			autoIncrement: true
+		},
+		username: {
+			type: DataTypes.STRING,
+			allowNull: false
 		},
 		first_name: {
 			type: DataTypes.STRING,
@@ -33,7 +37,10 @@ Post.init(
 			type: DataTypes.STRING,
 			allowNull: false,
 			validate: {
-				len: [80]
+				max: {
+					args: 80,
+					msg: 'Please use a maximum of 80 characters'
+				}
 			}
 		}
 	},
@@ -42,8 +49,8 @@ Post.init(
 		timestamps: true,
 		freezeTableName: true,
 		underscored: true,
-		modelName: 'post'
+		modelName: 'user'
 	}
 );
 
-module.exports = Post;
+module.exports = User;

@@ -21,17 +21,17 @@ Comment.init(
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'post',
+        model: 'user',
+        key: 'id'
+      }
+    },
+    video_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'video',
         key: 'id'
       }
     }
-    // post_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'post',
-    //     key: 'id'
-    //   }
-    // }
   },
   {
     sequelize,
