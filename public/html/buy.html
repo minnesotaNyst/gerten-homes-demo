@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WPTGFGR');
+    </script>
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
@@ -14,15 +23,17 @@
 </head>
 
 <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPTGFGR" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
     <!-- Nav bar -->
     <div class="navbar-fixed">
         <nav>
             <div class="white nav-wrapper">
-                <a class="brand-logo center responsive-img id="logo-container" href="#"><img class="logo"
+                <a class="brand-logo center responsive-img id=" logo-container" href="#"><img class="logo"
                         src="../images/GertenHomes_Logo-03.jpg"></a>
                 <a class="brand-logo left" id="logo-container" href="./index.html"><img
-                        class="logo exp-nav-logo hide-on-med-and-down"
-                        src="../images/eXpRealty-Black-logo.png"></a>
+                        class="logo exp-nav-logo hide-on-med-and-down" src="../images/eXpRealty-Black-logo.png"></a>
                 <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large right menu-button"><i
                         class="material-icons">menu</i></a>
             </div>
@@ -72,11 +83,12 @@
                     </div>
                     <div class="card-content">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maxime,
-                            voluptates 
+                            voluptates
                         </p>
                     </div>
                 </div>
-            </div><div class="col s12 m3">
+            </div>
+            <div class="col s12 m3">
                 <div class="card hoverable">
                     <div class="card-image">
                         <!-- image taken from https://i.ytimg.com/vi/bX0WVbWNHOc/maxresdefault.jpg -->
@@ -86,7 +98,7 @@
                     </div>
                     <div class="card-content">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maxime,
-                            voluptates necessitatibus 
+                            voluptates necessitatibus
                         </p>
                     </div>
                 </div>
@@ -101,7 +113,7 @@
                     </div>
                     <div class="card-content">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maxime,
-                            voluptates 
+                            voluptates
                         </p>
                     </div>
                 </div>
@@ -116,7 +128,7 @@
                     </div>
                     <div class="card-content">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maxime,
-                            voluptates 
+                            voluptates
                         </p>
                     </div>
                 </div>
@@ -134,25 +146,8 @@
 
     </section>
 
-    <section class="container section">
-        <br>
-        <div class="row">
-            <div class="col m3 s12">
-                <img class="responsive-img" src="../images/GHproperty.jpg">
-            </div>
-            <div class="col m9 s12">
-                <ul class="browser-default">
-                    <li><h4>Determine your What, Why, When & How</h4></li>
-                    <li><h4>Budget: Understand your cash inflow and outflows each month.</h4></li>
-                    <li><h4>Setup automatic saving: Create automatic deposits into a new savings account to be used on your downpayment</h4></li>
-                    <li><h4>Establish monthly meeting to assess your “Readiness”</h4></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
     <!-- training section-->
-    <!-- <section class="section container">
+    <section class="section container">
         <div class="section">
             <br></br>
             <div class="row valign-wrapper">
@@ -185,15 +180,16 @@
             </div>
             <div class="row center-align">
                 <div>
-                    <span><a class="waves-effect waves-light btn-large trim-color secondary-color-text" id="training-btn">
-                            <h4>ACCESS THE FREE TRAINING NOW!</h4>
+                    <span><a class="waves-effect waves-light btn-large trim-color secondary-color-text subscribe"
+                            id="training-btn">
+                            <h4 class="white-text">Subscribe for free training!</h4>
                         </a></span>
                 </div>
             </div>
         </div>
 
 
-    </section> -->
+    </section>
 
     <!-- Training Coverage section -->
     <!-- <section class="section container">
@@ -302,7 +298,7 @@
                     <i class="large material-icons">file_download</i>
                     <span>
                         <a class="waves-effect waves-light btn-large trim-color secondary-color-text" id="training-btn">
-                            <h4>Download the App</h4>
+                            <h4 class="white-text">Download the App</h4>
 
                         </a>
                     </span>

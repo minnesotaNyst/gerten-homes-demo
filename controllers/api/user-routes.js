@@ -1,13 +1,11 @@
 const router = require('express').Router();
-const sequelize = require('../../config/connection');
-
-// !Tony, we will import your model here...
+// const sequelize = require('../../config/connection');
 const { User } = require('../../models');
 
-// !Jake, I added a get route to findAll so we can look at the DB
+// don't really need this but that's fine...
 router.get('/', (req, res) => {
 	User.findAll({
-		attributes: { exclude: ['password'] }
+		attributes: ['username', 'email']
 	})
 		.then(dbUserData => res.json(dbUserData))
 		.catch(err => {
@@ -16,36 +14,44 @@ router.get('/', (req, res) => {
 		});
 });
 
-// POST https://api.followupboss.com/v1/events
+// route to create a user when the signup?? maybe?
+// !TONYYYYYYYYYY
 router.post('/', (req, res) => {
 	// TODO: need to update this post.create to match whatever follow up boss will accept...
 	User.create({
-		title: req.body.title,
-		post_url: req.body.post_url,
-		user_id: req.body.user_id
+		username: req.body.username,
+		email: req.body.email,
+		password: req.body.password
 	})
-		.then(dbUserData => res.json(dbUserData))
+		.then(dbUserData => {
+			req.session.save(() => {
+				req.session.user_id = dbUserData.id;
+				req.session.username = dbUserData.username;
+				req.session.loggedIn = true;
+
+				res.json(dbUserData);
+			});
+		})
 		.catch(err => {
 			console.log(err);
 			res.status(500).json(err);
 		});
 });
 
+// user login route
 router.post('/login', (req, res) => {
-
-	// expects {email: 'bill@gmail.com', password: 'password1234'}
 	User.findOne({
 		where: {
 			email: req.body.email
 		}
 	}).then(dbUserData => {
 		if (!dbUserData) {
-			res.status(400).json({ message: 'No user with that email address! ' });
+			res.status(400).json({ message: 'No user with that email address!' });
 			return;
 		}
 
-		//verify user
 		const validPassword = dbUserData.checkPassword(req.body.password);
+
 		if (!validPassword) {
 			res.status(400).json({ message: 'Incorrect password!' });
 			return;
@@ -60,6 +66,17 @@ router.post('/login', (req, res) => {
 			res.json({ user: dbUserData, message: 'You are now logged in!' });
 		});
 	});
+});
+
+// user logout route (destroy the session)
+router.post('/logout', (req, res) => {
+	if (req.session.loggedIn) {
+		req.session.destroy(() => {
+			res.status(204).end();
+		});
+	} else {
+		res.status(404).end();
+	}
 });
 
 module.exports = router;
