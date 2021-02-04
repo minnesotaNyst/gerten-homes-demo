@@ -5,7 +5,7 @@ const { User } = require('../../models');
 // don't really need this but that's fine...
 router.get('/', (req, res) => {
 	User.findAll({
-		attributes: ['username', 'email']
+		// attributes: ['username', 'email']
 	})
 		.then(dbUserData => res.json(dbUserData))
 		.catch(err => {
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 });
 
 // route to create a user when the signup?? maybe?
-// !TONYYYYYYYYYY
+// !JAKE DO THIS
 router.post('/', (req, res) => {
 	User.create({
 		username: req.body.username,
