@@ -41,34 +41,15 @@ async function loginFormHandler(event) {
 			}),
 			headers: { 'Content-Type': 'application/json' }
 		});
+		console.log(response);
 
 		if (response.ok) {
+			document.location.replace('http://localhost:3001/dashboard');
 		} else {
 			alert(response.statusText);
 		}
 	}
 }
-
-async function renderLogin(event) {
-	event.preventDefault();
-
-	// const response = await fetch('/login', {
-	// 	method: 'post',
-	// 	headers: { 'Content-Type': 'application/json' }
-	// });
-
-	const response = await fetch('/login');
-
-	if (response.ok) {
-		console.log('success');
-		//reroutes to dashboard if login, problem is this is hardcoded data
-		document.location.replace('http://localhost:3001/dashboard');
-	} else {
-		alert(response.statusText);
-	}
-}
-
-document.querySelector('#login').addEventListener('click', renderLogin);
 
 document
 	.querySelector('.login-form')
