@@ -7,6 +7,8 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 // !Tony, I think this is where you will call your model...?
 
+const isAuthenticated = require('../config/middleware/isAuthenticated');
+
 // console-log the session variables
 router.get('/', (req, res) => {
 	console.log(req.session);
@@ -16,14 +18,14 @@ router.get('/', (req, res) => {
 
 router.get('/login', (req, res) => {
 	if (req.session.loggedIn) {
-		res.redirect('/');
+		res.redirect('/dashboard');
 		return;
 	}
 
 	res.render('login');
 });
 
-router.get('/dashboard', (req, res) => {
+router.get('/dashboard', isAuthenticated, (req, res) => {
 	res.render('dashboard');
 });
 
