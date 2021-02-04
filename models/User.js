@@ -31,12 +31,10 @@ User.init(
 			allowNull: false
 		},
 		first_name: {
-			type: DataTypes.STRING,
-			allowNull: true
+			type: DataTypes.STRING
 		},
 		last_name: {
-			type: DataTypes.STRING,
-			allowNull: true
+			type: DataTypes.STRING
 		},
 		email: {
 			type: DataTypes.STRING,
@@ -55,7 +53,6 @@ User.init(
 		},
 		survey_query: {
 			type: DataTypes.STRING,
-			allowNull: true,
 			validate: {
 				max: {
 					args: 80,

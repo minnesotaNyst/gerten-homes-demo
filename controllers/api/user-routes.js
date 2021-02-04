@@ -2,10 +2,9 @@ const router = require('express').Router();
 // const sequelize = require('../../config/connection');
 const { User } = require('../../models');
 
-// don't really need this but that's fine...
 router.get('/', (req, res) => {
 	User.findAll({
-		attributes: ['username', 'email']
+		// attributes: ['username', 'email']
 	})
 		.then(dbUserData => res.json(dbUserData))
 		.catch(err => {
@@ -14,8 +13,8 @@ router.get('/', (req, res) => {
 		});
 });
 
-// route to create a user when the signup?? maybe?
-// !TONYYYYYYYYYY
+// create a new user
+// !JAKE DO THIS
 router.post('/', (req, res) => {
 	User.create({
 		username: req.body.username,
@@ -44,6 +43,7 @@ router.post('/login', (req, res) => {
 			email: req.body.email
 		}
 	}).then(dbUserData => {
+		console.log(req);
 		if (!dbUserData) {
 			res.status(400).json({ message: 'No user with that email address!' });
 			return;
@@ -62,7 +62,7 @@ router.post('/login', (req, res) => {
 			req.session.user_id = dbUserData.id;
 			req.session.username = dbUserData.username;
 			req.session.loggedIn = true;
-
+			//res.json(req.user)
 			res.json({ user: dbUserData, message: 'You are now logged in!' });
 			console.log('======LOGGED IN======');
 		});

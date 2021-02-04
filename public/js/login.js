@@ -32,6 +32,7 @@ async function loginFormHandler(event) {
 	const password = document.querySelector('#password-login').value.trim();
 
 	if (email && password) {
+		console.log(email, password);
 		const response = await fetch('/api/users/login', {
 			method: 'post',
 			body: JSON.stringify({
@@ -51,9 +52,13 @@ async function loginFormHandler(event) {
 async function renderLogin(event) {
 	event.preventDefault();
 
-	const response = await fetch('http://localhost:3001/login');
+	// const response = await fetch('/login', {
+	// 	method: 'post',
+	// 	headers: { 'Content-Type': 'application/json' }
+	// });
 
-	// check the response status
+	const response = await fetch('/login');
+
 	if (response.ok) {
 		console.log('success');
 		//reroutes to dashboard if login, problem is this is hardcoded data
