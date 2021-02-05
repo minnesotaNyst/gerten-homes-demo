@@ -11,7 +11,7 @@ async function Logout() {
 
 	if (response.ok) {
 		// document.location.replace('http://localhost:3001/login');
-		document.location.replace('/');
+		document.location.replace('/login');
 	} else {
 		alert(response.statusText);
 	}

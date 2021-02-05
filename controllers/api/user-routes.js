@@ -43,7 +43,7 @@ router.post('/login', (req, res) => {
 			email: req.body.email
 		}
 	}).then(dbUserData => {
-		console.log(req);
+		// console.log(req);
 		if (!dbUserData) {
 			res.status(400).json({ message: 'No user with that email address!' });
 			return;
@@ -56,13 +56,12 @@ router.post('/login', (req, res) => {
 			return;
 		}
 
-		// !Do we need to wrap this in and if statement? So...if validPassword then start the session?
 		req.session.save(() => {
 			// declare session variables
 			req.session.user_id = dbUserData.id;
 			req.session.username = dbUserData.username;
 			req.session.loggedIn = true;
-			//res.json(req.user)
+
 			res.json({ user: dbUserData, message: 'You are now logged in!' });
 			console.log('======LOGGED IN======');
 		});
