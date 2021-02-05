@@ -10,11 +10,13 @@ async function Logout() {
 	});
 
 	if (response.ok) {
-		// document.location.replace('http://localhost:3001/login');
-		document.location.replace('/login');
+		document.location.replace('http://localhost:3001/login');
+		// document.location.replace('/login');
 	} else {
 		alert(response.statusText);
 	}
 }
 
+
 document.querySelector('#logout').addEventListener('click', Logout);
+

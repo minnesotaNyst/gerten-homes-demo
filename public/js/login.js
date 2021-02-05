@@ -29,10 +29,8 @@ async function signupFormHandler(event) {
 // async function to handle the login form
 async function loginFormHandler(event) {
 	event.preventDefault();
-
 	const email = document.querySelector('#email-login').value.trim();
 	const password = document.querySelector('#password-login').value.trim();
-
 	if (email && password) {
 		console.log(email, password);
 		const response = await fetch('/api/users/login', {
@@ -44,7 +42,6 @@ async function loginFormHandler(event) {
 			headers: { 'Content-Type': 'application/json' }
 		});
 		console.log(response);
-
 		if (response.ok) {
 			document.location.replace('http://localhost:3001/dashboard');
 		} else {
@@ -52,6 +49,7 @@ async function loginFormHandler(event) {
 		}
 	}
 }
+
 
 document
 	.querySelector('.login-form')
