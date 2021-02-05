@@ -43,6 +43,7 @@ async function loginFormHandler(event) {
 		});
 
 		if (response.ok) {
+			document.location.replace('/dashboard');
 		} else {
 			alert(response.statusText);
 		}
@@ -62,13 +63,13 @@ async function renderLogin(event) {
 	if (response.ok) {
 		console.log('success');
 		//reroutes to dashboard if login, problem is this is hardcoded data
-		document.location.replace('http://localhost:3001/dashboard');
+		document.location.replace('/dashboard');
 	} else {
 		alert(response.statusText);
 	}
 }
 
-document.querySelector('#login').addEventListener('click', renderLogin);
+// document.querySelector('#login').addEventListener('click', renderLogin);
 
 document
 	.querySelector('.login-form')

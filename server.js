@@ -2,11 +2,10 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-
-const app = express();
-const PORT = process.env.PORT || 3001;
-
 const sequelize = require('./config/connection');
+
+require('dotenv').config();
+
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
@@ -18,6 +17,9 @@ const sess = {
 		db: sequelize
 	})
 };
+
+const app = express();
+const PORT = process.env.PORT || 3001;
 
 app.use(session(sess));
 
@@ -32,10 +34,9 @@ app.use(express.urlencoded({ extended: true }));
 // this is telling our app to look at the public directory for all of our js files
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(require('./controllers/'));
+app.use(require('./controllers'));
 
-// turn on routes
-// app.use(routes);
+
 
 app.use(session(sess));
 
