@@ -1,3 +1,4 @@
+// async function to handle the signup form
 async function signupFormHandler(event) {
 	event.preventDefault();
 
@@ -25,6 +26,7 @@ async function signupFormHandler(event) {
 	}
 }
 
+// async function to handle the login form
 async function loginFormHandler(event) {
 	event.preventDefault();
 
