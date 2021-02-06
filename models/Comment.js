@@ -18,20 +18,21 @@ Comment.init(
         len: [1]
       }
     },
-    user_id: {
+    username: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
         key: 'id'
       }
-    },
-    video_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'video',
-        key: 'id'
-      }
     }
+    // ,
+    // video_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: 'video',
+    //     key: 'id'
+    //   }
+    // }
   },
   {
     sequelize,
