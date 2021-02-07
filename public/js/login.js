@@ -10,7 +10,6 @@ async function signupFormHandler(event) {
 		// fetching the users email, pwd and username
 
 		const response = await fetch('/api/users/signup', {
-
 			method: 'post',
 			body: JSON.stringify({
 				username,
@@ -23,7 +22,7 @@ async function signupFormHandler(event) {
 		// check the response status
 		if (response.ok) {
 			console.log('success');
-			document.location.replace('http://localhost:3001/dashboard');
+			document.location.replace('/dashboard');
 		} else {
 			alert(response.statusText);
 		}
