@@ -3,7 +3,7 @@ const { Comment } = require('../../models');
 
 router.get('/', (req, res) => {
 	Comment.findAll({
-		attributes: ['id', 'comment_text', 'created_at'],
+		attributes: ['id', 'comment_text', 'created_at', 'user_id'],
 		order: [['created_at', 'DESC']]
 	})
 		.then(dbCommentData => res.json(dbCommentData))
@@ -11,7 +11,6 @@ router.get('/', (req, res) => {
 			console.log(err);
 			res.status(500).json(err);
 		});
-	
 });
 
 router.post('/', (req, res) => {
