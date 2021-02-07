@@ -1,7 +1,3 @@
-// I created a connection to the db and mysql with my .env file.
-// This is where it gets tricky because I have a password enabled,
-// so I'm not sure how we are going to collaborate unless !JAKE! I give you that?
-
 const Sequelize = require('sequelize');
 
 require('dotenv').config();
