@@ -1,0 +1,289 @@
+/* Custom Stylesheet */
+
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+/* Colors */
+
+:root {
+	--primary: #5e6f79;
+	/* this is the slate color */
+	--secondary: #211f1c;
+	/* this is the black color */
+	--tertiary: white;
+	--trim: #f7931e;
+	/* this is the trim color */
+	--header: Boston-bold;
+	--secondary-font: Gotham Light Regular;
+}
+
+@font-face {
+	font-family: var(--header);
+	src: url('assets/Boston-Bold.otf');
+}
+
+@font-face {
+	font-family: var(--secondary-font);
+	src: url('assets/Gotham Light Regular.otf');
+}
+
+p {
+	font-size: 18px;
+}
+
+.white-text {
+	color: var(--tertiary);
+}
+
+.primary-color {
+	background-color: var(--primary);
+}
+
+.trim-color {
+	background-color: var(--trim);
+}
+
+.primary-color-text {
+	color: #f79a0e;
+}
+
+.secondary-color-text {
+	color: var(--secondary)
+}
+
+.tertiary-color-text {
+	color: var(--primary)
+}
+
+.header {
+	font-family: var(--header);
+}
+
+.container {
+	width: 90%;
+}
+
+.login-container {
+	padding: 10px;
+	justify-content: center;
+	margin: auto;
+}
+
+.hero {
+	position: relative;
+	text-align: center;
+	max-height: 60vh;
+	overflow: hidden;
+}
+
+.img-cards {
+	overflow: hidden;
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.hero-title {
+	color: var(--primary);
+	/* text-shadow: 0px 2px 9px black; */
+}
+
+.hero-sub-title {
+	color: var(--primary);
+	font-weight: bold;
+	font-size: 48px;
+	/* text-shadow: 0px 2px 9px black; */
+}
+
+.section-img {
+	position: absolute;
+	opacity: 0.4;
+	min-width: 100%;
+	height: 500px;
+	overflow: hidden;
+}
+
+.section-video {
+	top: 50px;
+}
+
+.section-two-index {
+	width: 100vw;
+}
+
+.centered {
+	position: absolute;
+	left: 50%;
+	top: 30%;
+}
+
+.z-index-1 {
+	position: relative;
+	z-index: 1;
+}
+
+.z-index-2 {
+	position: absolute;
+	z-index: 2;
+}
+
+#gmap {
+	display: inline-block;
+	min-width: 100%;
+	min-height: 50vh;
+	justify-content: center;
+}
+
+.grid-layout {
+	align-self: stretch;
+}
+
+.logo {
+	height: 100px;
+}
+
+.exp-nav-logo {
+	height: 75px;
+	padding: 15px;
+}
+
+.navbar {
+	height: 100px;
+}
+
+/* button style */
+
+#training-btn {
+	display: inline-block;
+	height: auto;
+	width: auto;
+	border-radius: 8px;
+}
+
+.download-btn {
+	color: white;
+	text-align: center;
+}
+
+.btn:hover, .btn-large:hover, .btn-small:hover, .details:hover {
+	background-color: #55565c;
+	text-decoration: none;
+	color: whitesmoke;
+}
+
+.btn:focus, .btn-large:focus, .btn-small:focus, .details:focus {
+	background-color: #55565c;
+	text-decoration: none;
+	color: whitesmoke;
+}
+
+.button {
+	background-color: var(--primary);
+}
+
+.menu-button {
+	padding: 15px;
+	size: 25vh !important;
+}
+
+.menu-button-shadow {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.inline {
+	display: inline-block;
+}
+
+.matter {
+	text-decoration: none;
+}
+
+/* unvisited link */
+
+a:link {
+	color: black;
+}
+
+/* visited link */
+
+a:visited {
+	color: gray;
+}
+
+/* mouse over link */
+
+a:hover {
+	color: blue;
+}
+
+/* selected link */
+
+a:active {
+	color: brown;
+}
+
+nav ul a, nav .brand-logo {
+	color: #444;
+}
+
+p {
+	line-height: 2rem;
+}
+
+.sidenav-trigger {
+	color: #26a69a;
+}
+
+.parallax-container {
+	min-height: 380px;
+	line-height: 0;
+	height: 60vh;
+	color: rgba(255, 255, 255, 0.9);
+	opacity: 80%;
+}
+
+.timeline p {
+	font-size: 50px;
+}
+
+@media only screen and (max-width: 992px) {
+	#index-banner .section {
+		top: 10%;
+	}
+	.team-photo-index {
+		width: 35vh;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	#index-banner .section {
+		top: 0;
+	}
+	.team-photo-index {
+		width: 35vh;
+	}
+	.btn-large {
+		padding: 0px 3px;
+	}
+}
+
+.icon-block {
+	padding: 0 15px;
+}
+
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+footer.page-footer {
+	margin: 0;
+}
