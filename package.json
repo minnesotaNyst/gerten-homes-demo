@@ -4,14 +4,16 @@
 	"description": "## Description",
 	"main": "server.js",
 	"engines": {
-		"node": "14.15.x"
+		"node": "14.15.x",
+		"npm": "6.14.x"
 	},
 	"scripts": {
 		"start": "node server.js",
 		"watch": "nodemon server.js",
 		"seed": "node seeds/index.js",
-		"build": "npm run build && npm run seed"
-	},
+		"heroku-postbuild": "npm run seed"
+  },
+  "heroku-run-build-script": true,
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/nathan-potts41/gerten-homes-demo.git"
