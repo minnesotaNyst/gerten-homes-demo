@@ -8,7 +8,8 @@ const exphbs = require('express-handlebars');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-require('dotenv').config();
+// !We have this in the connection.js file - do we need it here too? Commenting out for now...
+// require('dotenv').config();
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
