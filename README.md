@@ -50,16 +50,16 @@ The application contains experiences based on user authentication, and allows th
 ## Screenshots
 
 Landing page providing a clean and dynamically responsive website for new and previous visitors, with a menu structure.
-![Landing Page](./assets/images/ghhomepage.png)
+![Landing Page](./public/css/images/ghhomepage.png)
 
 Simple navigational menu, accessible from all pages.
-![Menu Page](./assets/images/ghmenu.png)
+![Menu Page](./public/css/images/ghmenu.png)
 
 Contact form with Google Maps location
-![Contact Form](./assets/images/ghcontact_gmaps.png)
+![Contact Form](./public/css/images/ghcontact_gmaps.png)
 
 Login and new user signup page
-![Contact Form](./assets/images/ghlogin_singup.png)
+![Contact Form](./public/css/images/ghlogin_singup.png)
 
 ---
 ## Future Enhancements
