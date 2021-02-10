@@ -1,66 +1,69 @@
-# Welcom to Gerten Homes
+# Welcome to Gerten Homes
 
 ## Description
+Gerten Homes has requested a web app that provides end user a dynamic web experience, and drives website interaction and lead generations. 
+
+The application contains experiences based on user authentication, and allows the real estate organization the ability to share additional content with users (once logged in), generate leads through a contact form, store all data in a database, and tracks web interactions using the Google Analytics platform.
 
 ### Table of Contents
+- [Website](#website)
+- [Presentation](#presentation)
+- [Built With](#built-with)
+- [Contribution](#contribution)
+- [Screenshots](#screenshots)
+- [Future Enhancements](#future-enhancements)
 
-- [User Story](#user)
-- [Acceptance](#acceptance)
-- [NPM](#npm)
-- [Contributing](#contributing)
-- [Questions](#questions)
-- [About](#about)
-- [Screenshot](#screenshot)
+---
+## Website
+- https://gertenhomes.herokuapp.com/
 
-## User Story
+[Back to Contents](#table-of-contents)
 
-```md
-AS A business owner
-I WANT to be able to view and manage the departments, roles, and employees in my company
-SO THAT I can organize and plan my business
-```
+---
+## Presentation
+- https://docs.google.com/presentation/d/1veAYcpV-VAG4281r57_i6wLnQDisUsCbpAAF6HsickM/edit?usp=sharing
 
-## Acceptance Criteria
+[Back to Contents](#table-of-contents)
 
-```md
-GIVEN a command-line application that accepts user input
-WHEN I start the application
-THEN I am presented with the following options: view all departments, view all roles, view all employees, add a department, add a role, add an employee, and update an employee role
-```
-
-## NPM Packages/Technical
-
-- inquirer https://www.npmjs.com/package/inquirer
-- console.table https://www.npmjs.com/package/console.table
-- mysql2 https://www.npmjs.com/package/mysql2
-
-- Express
-- Sequelize
-- Handlebars
-- Bcrypt
-- Env
+---
+## Built With
+- [Bcrypt](https://www.npmjs.com/package/bcrypt)
+- [Env](https://www.npmjs.com/package/env)
+- [Express](https://www.npmjs.com/package/express)
+- [Handlebars](https://www.npmjs.com/package/handlebars)
+- Google Analytics
 - MySQL
+- [Materialize](https://materializecss.com/)
+- [Sequelize](https://www.npmjs.com/package/sequelize)
 
-- npm install express-handlebars
-- npm install sequelize
-- npm install bcrypt
-- npm install env
-- npm install mysql2
-- npm i express-session connect-session-sequelize
+[Back to Contents](#table-of-contents)
 
-## Contributing
+---
+## Contribution
+- [Anthony Potts](https://github.com/anthonypotts)
+- [Jake Nystrom](https://github.com/minnesotaNyst)
+- [Nathan Potts](https://github.com/nathan-potts41)
+- [Will Pearson](https://github.com/willp429)
+- [Andrew Warmath]()
 
-Nathan Potts, Tony Potts, Jake Nystrom, Andrew Warmath, William Pearson
+---
+## Screenshots
 
-## Questions
+Landing page providing a clean and dynamically responsive website for new and previous visitors, with a menu structure.
+![Landing Page](./public/css/images/ghhomepage.png)
 
-## About the Author
+Simple navigational menu, accessible from all pages.
+![Menu Page](./public/css/images/ghmenu.png)
 
-## Screenshot
+Contact form with Google Maps location
+![Contact Form](./public/css/images/ghcontact_gmaps.png)
 
-![deployed screenshot](./assets/images/employee-tracker.png)
+Login and new user signup page
+![Contact Form](./public/css/images/ghlogin_singup.png)
 
-## TODO
-
-- More validations surrounding the prompts
-- Dynamically generating lists for the prompts
+---
+## Future Enhancements
+- Integrate CRM API of customer's choice (follow-up boss, salesforce, etc.)
+- Add additional site interaction
+- Continue to optimize Google Analytics tracking
+- Build full content management system backend
